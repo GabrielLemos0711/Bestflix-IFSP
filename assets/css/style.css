@@ -1,0 +1,233 @@
+:root{
+    --primary: #6ebb60;
+    --secundary: #17ac1e;
+    --secundary-dark: #0a8810;
+    --grey-0: #000;   
+    --grey-200: #363434;
+    --grey-400: #4b4a4a;
+    --grey-600: #cabbbb;
+    --grey-800: #d3d3d3;
+    --grey-1000:#fff;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+}
+
+body {
+    background: var(--grey-200);
+    color: var(--grey-1000);
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+button{
+    background: var(--secundary);
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: var(--grey-1000);
+    border: none;
+}
+
+button:hover{
+    background-color: var(--secundary-dark);
+}
+
+.flex-sb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+body > header{
+    background-color: var(--grey-400);
+    height: 50px;
+}
+
+.container {
+    /*width: 100%; = Para telas menores, ele irá ocupar a largura da tela toda*/
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*heigth: 50px; = É preciso usar para que o align-items funcione*/
+    height: 50px;
+}
+
+#logo{
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+}
+
+#logo svg{
+    width: 40px;
+    height: 40px;
+    margin: 0 10px 0 0;
+    fill: var(--primary);
+}
+
+#logo h1{
+    color: var(--primary);
+}
+
+#logo h1 span{
+    color: var(--grey-1000);
+    font-weight: 400;
+}
+
+#main-nav{
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 40px;
+}
+
+#main-nav ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#main-nav ul li{
+    list-style-type: none;
+    margin:  0 0 0 20px;
+}
+
+#main-nav ul li a{
+    color: var(--grey-800);
+    font-size: 1.2rem;
+}
+#main-nav ul li a:hover{
+    color: var(--grey-1000);
+    font-size: 1.2rem;
+}
+
+.active, #main-nav ul li a.active{
+    color: var(--primary);
+    font-weight: 700px;
+    border-bottom: 3px solid var(--primary);
+    padding: 9px;
+}
+
+#content-header{
+    margin-top: 20px;
+}
+
+.section-title{
+    border-left: 4px solid var(--secundary);
+    padding: 10px 0 10px 15px;
+}
+
+#productions{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+#productions .card-movie{
+    width: 235px;
+    min-height: 300px;
+    background: var(--grey-400);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+#productions .card-movie img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#productions .card-movie img:hover{
+    opacity: .7;
+}
+
+#productions .card-movie > div{
+    padding: 10px;
+}
+
+#productions .card-movie div a h2{
+    margin: 0 0 5px 0;
+    color: var(--secundary);
+    font-size: 22px;
+}
+
+#productions .card-movie div div p{
+    margin: 0 0 5px 0;
+    color: var(--grey-1000);
+}
+
+#productions .card-movie div div img{
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+#productions .card-movie div div{
+    display: flex;
+}
+
+#productions .card-movie div div img:nth-child(2){
+    margin-left: auto;
+}
+
+body > footer{
+    background: var(--grey-400);
+    color: var(--grey-600);
+    text-align: center;
+    padding: 20px 30px;
+    margin-top: 20px;
+}
+
+.modal{
+    background-color: #0c0c0c85;
+    position: absolute;
+    display: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .modal-body{
+    width: 600px;
+    border-radius: 15px;
+    background: var(--grey-1000);
+    color: var(--grey-0);
+    padding: 30px 20px;
+}
+
+.modal .modal-body form{
+    display: flex;
+    flex-direction: column;
+}
+
+.modal .modal-body form label{
+    margin: 15px 0 0 0;
+}
+
+.modal .modal-body form input[type=text]{
+    height: 30px;
+    padding: 3px 5px;
+    border-radius: 10px;
+}
+
+.modal .modal-body form button{
+    margin: 15px 0 0 0;
+}
+

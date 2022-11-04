@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt - br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <title>BestFlix - O streaming mais bonito que o Netflix</title>
+
+</head>
+<body onload="loadProductions()">
+    <header> 
+        <div class="container main-header">
+            <a href="/bestflix/">
+                <div id="logo">
+                    <svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path fill="none" d="M0 0h24v24H0z"/>
+                            <path d="M2 3.993A1 1 0 0 1 2.992 3h18.016c.548 0 .992.445.992.993v16.014a1 1 0 0 1-.992.993H2.992A.993.993 0 0 1 2 20.007V3.993zm8.622 4.422a.4.4 0 0 0-.622.332v6.506a.4.4 0 0 0 .622.332l4.879-3.252a.4.4 0 0 0 0-.666l-4.88-3.252z"/>
+                        </g>
+                    </svg>
+                    <h1><span>Best</span>Flix</h1>
+                </div>
+            </a>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="/bestflix/" class="active">Home</a></li>
+                    <li><a href="/bestflix/">Movies</a></li>
+                    <li><a href="/bestflix/">Series</a></li>
+                </ul> <!--ul-->
+            </nav> <!--nav#main-nav-->
+        </div> <!--div.container main-header-->
+    </header> <!--header-->
+
+    <main>
+        <header id="content-header" class="container flex-sb">
+            <p>Home / Filmes / Teste</p>
+            <button onclick="showModal('#modal-cadastrar')">Adicionar Produção</button>
+        </header>
+        <section class="container">
+            
+                <h1 class="section-title">Produções</h1>
+                <article id="productions">
+
+                    <div class="card-movie">
+                        </div><!--card movie-->
+                    <div class="card-movie">
+                        </div><!--card movie-->
+                    <div class="card-movie">
+                        </div><!--card movie-->
+                    <div class="card-movie">
+                        </div><!--card movie-->
+                    <div class="card-movie">
+                        </div><!--card movie-->
+                    <div class="card-movie">
+                        </div><!--card movie-->
+                    <div class="card-movie">
+                        </div><!--card movie-->
+                </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© Copyright 2022 BestFlix | Todos os direitos Reservados</p>
+        <p>Gabriel Lemos</p>
+    </footer>
+
+    <div class="modal" id="modal-cadastrar" onclick="hideModal('#modal-cadastrar', event)">
+        <div class="modal-body">
+            <h1>Cadastrar Produção</h1>
+            <form onsubmit="insert(event)">
+                <label for="title">Title:</label>
+                <input type="text" name="title">
+                <label for="Description">Description:</label>
+                <input type="text" name="description">
+                <label for="category">category:</label>
+                <input type="text" name="category">
+                <label for="Cover">Cover:</label>
+                <input type="text" name="cover">
+                <label for="Classification">Classification:</label>
+                <input type="text" name="classification">
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-editar" onclick="hideModal('#modal-editar', event)">
+        <div class="modal-body">
+            <h1>Editar Produção</h1>
+            <form onsubmit="edit(event)">
+                <label for="title">Title:</label>
+                <input type="text" name="title">
+                <label for="Description">Description:</label>
+                <input type="text" name="description">
+                <label for="category">category:</label>
+                <input type="text" name="category">
+                <label for="Cover">Cover:</label>
+                <input type="text" name="cover">
+                <label for="Classification">Classification:</label>
+                <input type="text" name="classification">
+                <input type="hidden" name="id" />
+                <button type="submit">Editar</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="assets/js/main.js"></script>
+    
+</body>
+</html>
